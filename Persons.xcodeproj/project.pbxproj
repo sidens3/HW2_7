@@ -18,6 +18,7 @@
 		4A9F0C3C273AECF8005D30EC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F0C3B273AECF8005D30EC /* DataManager.swift */; };
 		4A9F0CB8273AF63F005D30EC /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F0CB7273AF63F005D30EC /* String+Extensions.swift */; };
 		4A9F0CBA273AF927005D30EC /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F0CB9273AF927005D30EC /* Int+Extensions.swift */; };
+		4A9F0CBC273AFB29005D30EC /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F0CBB273AFB29005D30EC /* PersonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4A9F0C3B273AECF8005D30EC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		4A9F0CB7273AF63F005D30EC /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		4A9F0CB9273AF927005D30EC /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		4A9F0CBB273AFB29005D30EC /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				4A9F0C33273AE295005D30EC /* SmallPersonsListViewController.swift */,
 				4A9F0C35273AE2F7005D30EC /* DetalizedPersonsListViewController.swift */,
+				4A9F0CBB273AFB29005D30EC /* PersonViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				4A9F0C20273ADCA4005D30EC /* SceneDelegate.swift in Sources */,
 				4A9F0CBA273AF927005D30EC /* Int+Extensions.swift in Sources */,
 				4A9F0C36273AE2F7005D30EC /* DetalizedPersonsListViewController.swift in Sources */,
+				4A9F0CBC273AFB29005D30EC /* PersonViewController.swift in Sources */,
 				4A9F0C34273AE295005D30EC /* SmallPersonsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

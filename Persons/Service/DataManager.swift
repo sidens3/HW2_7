@@ -43,9 +43,8 @@ class DataManager {
     private func generatePersonsList(with count: Int) -> [Person] {
         var personsList: [Person] = []
         
-        for iteration in (.zero..<count) {
+        for _ in (.zero..<count) {
             personsList.append(getRandomPerson())
-            print(iteration)ç
         }
         return personsList
     }

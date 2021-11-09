@@ -13,12 +13,3 @@ struct Person {
     let phoneNumber: Int
     let email: String
 }
-
-//stub
-extension Person {
-    static func getPersonList() -> [Person] {
-        return [
-            Person(name: "Mich", secondName: "Tompson", phoneNumber: 79991234567, email: "email@gmail.com")
-        ]
-    }
-}
