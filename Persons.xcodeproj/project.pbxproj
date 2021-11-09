@@ -15,6 +15,9 @@
 		4A9F0C34273AE295005D30EC /* SmallPersonsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F0C33273AE295005D30EC /* SmallPersonsListViewController.swift */; };
 		4A9F0C36273AE2F7005D30EC /* DetalizedPersonsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F0C35273AE2F7005D30EC /* DetalizedPersonsListViewController.swift */; };
 		4A9F0C39273AE5C7005D30EC /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F0C38273AE5C7005D30EC /* Person.swift */; };
+		4A9F0C3C273AECF8005D30EC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F0C3B273AECF8005D30EC /* DataManager.swift */; };
+		4A9F0CB8273AF63F005D30EC /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F0CB7273AF63F005D30EC /* String+Extensions.swift */; };
+		4A9F0CBA273AF927005D30EC /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F0CB9273AF927005D30EC /* Int+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		4A9F0C33273AE295005D30EC /* SmallPersonsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallPersonsListViewController.swift; sourceTree = "<group>"; };
 		4A9F0C35273AE2F7005D30EC /* DetalizedPersonsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalizedPersonsListViewController.swift; sourceTree = "<group>"; };
 		4A9F0C38273AE5C7005D30EC /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		4A9F0C3B273AECF8005D30EC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		4A9F0CB7273AF63F005D30EC /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		4A9F0CB9273AF927005D30EC /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +66,14 @@
 		4A9F0C1C273ADCA4005D30EC /* Persons */ = {
 			isa = PBXGroup;
 			children = (
+				4A9F0C3D273AF5F7005D30EC /* extensions */,
+				4A9F0C3A273AECD7005D30EC /* Service */,
 				4A9F0C37273AE5B5005D30EC /* Model */,
 				4A9F0C32273AE1FB005D30EC /* ViewControllers */,
 				4A9F0C31273AE114005D30EC /* View */,
 				4A9F0C1D273ADCA4005D30EC /* AppDelegate.swift */,
 				4A9F0C1F273ADCA4005D30EC /* SceneDelegate.swift */,
 				4A9F0C26273ADCA6005D30EC /* Assets.xcassets */,
-				4A9F0C28273ADCA6005D30EC /* LaunchScreen.storyboard */,
 				4A9F0C2B273ADCA6005D30EC /* Info.plist */,
 			);
 			path = Persons;
@@ -75,6 +82,7 @@
 		4A9F0C31273AE114005D30EC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4A9F0C28273ADCA6005D30EC /* LaunchScreen.storyboard */,
 				4A9F0C23273ADCA4005D30EC /* Main.storyboard */,
 			);
 			path = View;
@@ -95,6 +103,23 @@
 				4A9F0C38273AE5C7005D30EC /* Person.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4A9F0C3A273AECD7005D30EC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4A9F0C3B273AECF8005D30EC /* DataManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4A9F0C3D273AF5F7005D30EC /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4A9F0CB7273AF63F005D30EC /* String+Extensions.swift */,
+				4A9F0CB9273AF927005D30EC /* Int+Extensions.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,8 +193,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A9F0C39273AE5C7005D30EC /* Person.swift in Sources */,
+				4A9F0CB8273AF63F005D30EC /* String+Extensions.swift in Sources */,
+				4A9F0C3C273AECF8005D30EC /* DataManager.swift in Sources */,
 				4A9F0C1E273ADCA4005D30EC /* AppDelegate.swift in Sources */,
 				4A9F0C20273ADCA4005D30EC /* SceneDelegate.swift in Sources */,
+				4A9F0CBA273AF927005D30EC /* Int+Extensions.swift in Sources */,
 				4A9F0C36273AE2F7005D30EC /* DetalizedPersonsListViewController.swift in Sources */,
 				4A9F0C34273AE295005D30EC /* SmallPersonsListViewController.swift in Sources */,
 			);
