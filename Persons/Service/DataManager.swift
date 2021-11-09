@@ -33,10 +33,16 @@ class DataManager {
         "sonya@sonya.cat"
     ]
     
-    private var personsList: [Person] = []
+    private let personCount = 15
+    private static var personsList: [Person] = []
     
-    public func getPersonList(with personCount: Int) -> [Person] {
-        return generatePersonsList(with: personCount)
+    public func getPersonList() -> [Person] {
+        let sharedPersonList = DataManager.personsList
+        
+        if sharedPersonList.count == .zero {
+            return generatePersonsList(with: personCount)
+        }
+        return sharedPersonList
     }
     
     //MARK: - Private Methods

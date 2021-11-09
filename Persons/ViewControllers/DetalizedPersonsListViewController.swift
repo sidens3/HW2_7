@@ -8,15 +8,19 @@
 import UIKit
 
 class DetalizedPersonsListViewController: UITableViewController {
+    
+    private var personList: [Person]?
+    private let dataManager = DataManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        personList = dataManager.getPersonList()
     }
 
-    // MARK: - Table view data source
-
+    //MARK: - UITableViewDataSource
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return personList?.count ?? .zero
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -25,52 +29,31 @@ class DetalizedPersonsListViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "detalizedPersonCell", for: indexPath)
+    
+        cell.contentConfiguration = getConfigured(content: cell.defaultContentConfiguration(), by: indexPath)
         return cell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard let person = personList?[section] else { return .empty }
+        return "\(person.name) \(person.secondName)"
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    
+    //MARK: - Private Methods
+    private func getConfigured(content: UIListContentConfiguration, by indexPath: IndexPath) -> UIListContentConfiguration {
+        guard let person = personList?[indexPath.section] else { return content }
+        var content = content
+        
+        switch indexPath.row {
+        case 0:
+            content.image = UIImage(systemName: "phone")
+            content.text = String(person.phoneNumber)
+        default:
+            content.image = UIImage(systemName: "tray")
+            content.text = person.email
+        }
+        return content
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

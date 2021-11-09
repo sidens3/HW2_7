@@ -11,13 +11,12 @@ class SmallPersonsListViewController: UITableViewController {
     
     private var personList: [Person]?
     private let dataManager = DataManager()
-    private let personCount = 4
 
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        personList = dataManager.getPersonList(with: personCount)
+        personList = dataManager.getPersonList()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
