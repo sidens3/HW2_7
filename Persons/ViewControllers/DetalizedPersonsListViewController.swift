@@ -39,6 +39,11 @@ class DetalizedPersonsListViewController: UITableViewController {
         return "\(person.name) \(person.secondName)"
     }
     
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let headerView = view as? UITableViewHeaderFooterView else { return }
+        headerView.tintColor = .clear
+        headerView.textLabel?.textColor = .systemGray
+    }
     
     //MARK: - Private Methods
     private func getConfigured(content: UIListContentConfiguration, by indexPath: IndexPath) -> UIListContentConfiguration {
@@ -55,5 +60,4 @@ class DetalizedPersonsListViewController: UITableViewController {
         }
         return content
     }
-
 }

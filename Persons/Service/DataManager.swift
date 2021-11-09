@@ -14,19 +14,19 @@ class DataManager {
         "Соня",
         "Дымка"
     ]
-    private let secondNameArray: [String] = [
+    private let secondNameArray = [
         "Иванов",
         "Петров",
         "Котейкин",
         "Котэнатор"
     ]
-    private let phoneArray: [Int] = [
+    private let phoneArray = [
         79991234567,
         71234567890,
         79213333333,
         79005005050
     ]
-    private let emailArray: [String] = [
+    private let emailArray = [
         "cat@gmail.com",
         "myrz@yandex.ru",
         "dym@mail.ru",
@@ -64,4 +64,3 @@ class DataManager {
         )
     }
 }
-
