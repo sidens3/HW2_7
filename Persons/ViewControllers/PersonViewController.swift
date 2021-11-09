@@ -24,8 +24,16 @@ class PersonViewController: UIViewController {
         guard let person = self.person else { return }
         
         navigationItem.title = "\(person.name) \(person.secondName)"
+        updateNavBarBackButton(title: "Back")
         
         phoneLabel.text = "Phone: \(person.phoneNumber)"
         emailLabel.text = "Email: \(person.email)"
+    }
+    
+    private func updateNavBarBackButton(title: String) {
+        let backButton = UIBarButtonItem()
+        
+        backButton.title = title
+        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
 }
