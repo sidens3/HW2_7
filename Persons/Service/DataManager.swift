@@ -12,25 +12,37 @@ class DataManager {
         "Мурзик",
         "Барсик",
         "Соня",
-        "Дымка"
+        "Дымка",
+        "Антон",
+        "Иван",
+        "Даниил"
     ]
     private let secondNameArray = [
         "Иванов",
         "Петров",
         "Котейкин",
-        "Котэнатор"
+        "Котэнатор",
+        "Сидоров",
+        "Антонов",
+        "Федоров"
     ]
     private let phoneArray = [
-        79991234567,
-        71234567890,
-        79213333333,
+        19991234567,
+        21234567890,
+        39213333333,
+        49005005050,
+        51235858890,
+        69212343333,
         79005005050
     ]
     private let emailArray = [
         "cat@gmail.com",
         "myrz@yandex.ru",
         "dym@mail.ru",
-        "sonya@sonya.cat"
+        "sonya@sonya.cat",
+        "cators@gmail.net",
+        "myrmyrmyr@yandex.ru",
+        "fedorKot@mail.ru",
     ]
     
     private let personCount = 15
@@ -52,6 +64,8 @@ class DataManager {
         for _ in (.zero..<count) {
             personsList.append(getRandomPerson())
         }
+        
+        personsList.sort { $0.name < $1.name }
         return personsList
     }
     
